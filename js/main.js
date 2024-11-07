@@ -18,11 +18,12 @@ const generateImageCards = (cardNumToGen) => {
     .then((imgsData) => {
       imgsData.forEach((img) => {
         cardStamp.innerHTML += `           
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12 col-md-6 col-xl-4">
               <div class="card">
+              <img class="card-pin" src="./img/pin.svg" alt="pin" />
                 <div class="card-body">
                   <img src="${img.url}" alt="img" />
-                  <div class="py-3">${img.title}</div>
+                  <div class="pt-3 pb-1">${img.title}</div>
                 </div>
               </div>
             </div>`;

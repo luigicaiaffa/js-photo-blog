@@ -1,9 +1,11 @@
 /* ! RESET */
+
 img {
   max-width: 100%;
 }
 
 /* ! UTILS */
+
 body {
   background-image: url(../img/cork.png);
 }
@@ -14,7 +16,9 @@ body {
   font-size: 1.2rem;
 }
 
-/* ! HEADER */
+/* ! CONTENT */
+
+/* # Header */
 .page-header {
   background-image: url(../img/wall.png);
   margin-bottom: 3rem;
@@ -23,4 +27,12 @@ body {
 .title {
   font-family: "Edu TAS Beginner", cursive;
   font-size: 5rem;
+}
+
+/* # Stamped cards */
+.card-pin {
+  position: absolute;
+  left: 50%;
+  translate: -50%;
+  top: -10px;
 }
