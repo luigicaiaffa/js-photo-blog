@@ -1,7 +1,15 @@
+/* ! RESET */
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
 
+body {
+    background-image: url(../img/cork.png);
+}
+
+/* ! UTILS */
+
+/* # Header */
 .page-header {
   background-image: url(../img/wall.png);
 }
