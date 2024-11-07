@@ -2,19 +2,18 @@
 
 // card per stampare output
 const cardStamp = document.getElementById("card-output");
-// const cardStamp2 = document.getElementById("card-output-2");
-// const cardStamp3 = document.getElementById("card-output-3");
-// const cardStamp4 = document.getElementById("card-output-4");
-// const cardStamp5 = document.getElementById("card-output-5");
-// const cardStamp6 = document.getElementById("card-output-6");
 
-// card container
-const allCards = document.querySelectorAll(".card");
+// # Svolgimento
 
-// # Funzioni
+// numero di card da generare
+const cardToGen = 6;
 
-const generateImageCards = (cardNum) => {
-  fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${cardNum}`)
+/** funzione che genera e stampa card con un'immaggine ed una descrizione
+ *
+ * @param {number} cardNum  numero di card da stampare
+ */
+const generateImageCards = (cardNumToGen) => {
+  fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${cardNumToGen}`)
     .then((res) => res.json())
     .then((imgsData) => {
       imgsData.forEach((img) => {
@@ -34,8 +33,5 @@ const generateImageCards = (cardNum) => {
     });
 };
 
-// # Svolgimento
-const cardGenNum = 6;
-
 // # Output
-generateImageCards(cardGenNum);
+generateImageCards(cardToGen);
