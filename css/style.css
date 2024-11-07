@@ -1,15 +1,18 @@
 /* ! RESET */
 img {
-    max-width: 100%;
-}
-
-body {
-    background-image: url(../img/cork.png);
+  max-width: 100%;
 }
 
 /* ! UTILS */
+body {
+  background-image: url(../img/cork.png);
+}
 
-/* # Header */
+.card {
+  height: 100%;
+}
+
+/* ! HEADER */
 .page-header {
   background-image: url(../img/wall.png);
   margin-bottom: 3rem;
