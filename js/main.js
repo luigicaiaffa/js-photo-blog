@@ -28,9 +28,6 @@ const generateImageCards = (cardNumToGen) => {
               </div>
             </div>`;
       });
-
-      // debug
-      console.log(imgsData);
     });
 };
 
