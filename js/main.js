@@ -1,18 +1,16 @@
 // # Recupero elementi
-
 // card per stampare output
 const cardStamp = document.getElementById("card-output");
 
 // layover elements
 const layoverEl = document.getElementById("layover");
 const layoverBtn = document.getElementById("layover-btn");
-const layoverImg = document.getElementById("layover-img")
+const layoverImg = document.getElementById("layover-img");
 
 // numero di card da generare
 const cardToGen = 6;
 
 // # Svolgimento
-
 /** funzione che attiva e disattiva il layover
  *
  */
@@ -22,25 +20,24 @@ const layoverHandler = () => {
 
   // per ogni card
   allCards.forEach((singleCard) => {
-    // raccogli il nodo img
+    // raccogli il nodo <img>
     const imagesEl = singleCard.children[1].firstElementChild;
 
     // ! switch on
-    // al click della singola
+    // al click della singola card
     singleCard.addEventListener("click", () => {
       // rimuovi d-none al layover
       layoverEl.classList.remove("d-none");
 
       // per ogni card
       allCards.forEach((singleCard) => {
-        // aggiungi d-none alle card
+        // aggiungi d-none
         singleCard.classList.add("d-none");
       });
 
       // stampa l'img nel layover
       layoverImg.innerHTML = `<img src="${imagesEl.src}" alt="img" />`;
     });
-
 
     // ! switch off
     // al click del bottone
@@ -50,14 +47,12 @@ const layoverHandler = () => {
 
       // per ogni card
       allCards.forEach((singleCard) => {
-        // rimuovi il d-none alle card
+        // rimuovi il d-none
         singleCard.classList.remove("d-none");
       });
     });
   });
 };
-
-// disattiva il layover al click del bottone
 
 /** funzione che genera e stampa card con un'immaggine ed una descrizione
  *
@@ -82,6 +77,7 @@ const generateImageCards = (numCardToGen) => {
           </div>`;
       });
 
+      // layover on/off
       layoverHandler();
     });
 };
