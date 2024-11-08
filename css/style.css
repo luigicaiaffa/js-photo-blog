@@ -42,7 +42,7 @@ body {
 #layover {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: center;
   position: fixed;
