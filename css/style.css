@@ -32,15 +32,16 @@ body {
   height: 100%;
   font-size: 1.2rem;
   font-family: var(--default-font-family);
+  transition-duration: 0.8s;
+  transition-property: transform, box-shadow;
   box-shadow: 10px 10px 15px;
   cursor: pointer;
 }
 
 .card:hover {
-  overflow: hidden;
   transition-duration: 0.8s;
-  transition-property: transform;
-  transform: rotate(30deg) scale(1.1);
+  transition-property: transform, box-shadow;
+  transform: rotate(25deg) scale(1.1);
   box-shadow: 20px 15px 10px;
   z-index: 1;
 }
