@@ -39,7 +39,7 @@ body {
   overflow: hidden;
   transition-duration: 0.8s;
   transition-property: transform;
-  transform: rotate(30deg);
+  transform: rotate(30deg) scale(1.2);
   box-shadow: 20px 15px 10px;
   z-index: 1;
 }

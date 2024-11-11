@@ -66,7 +66,7 @@ const generateImageCards = (numCardToGen) => {
       imgsData.forEach((img) => {
         // stampa le card
         cardStamp.innerHTML += `           
-          <div class="col-12 col-md-6 cosl-lg-4">
+          <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
               <img class="card-pin" src="./img/pin.svg" alt="pin" />
               <div class="card-body">
