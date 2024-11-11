@@ -24,7 +24,7 @@ body {
 
 .title {
   font-family: var(--default-font-family);
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 /* # Stamped cards */
@@ -78,4 +78,14 @@ body {
 
 #overlay-img {
   margin: 2rem;
+}
+
+/* ! ! ! */
+
+/* # 480px */
+@media screen and (min-width: 480px) {
+  /* header title */
+  .title {
+    font-size: 4.5rem;
+  }
 }
