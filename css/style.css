@@ -1,20 +1,17 @@
+/* ! CUSTOM */
+
+:root {
+  --default-font-family: "Edu TAS Beginner", cursive;
+}
+
 /* ! RESET */
 
 img {
   max-width: 100%;
 }
 
-/* ! UTILS */
-
 body {
   background-image: url(../img/cork.png);
-}
-
-.card {
-  height: 100%;
-  font-family: "Edu TAS Beginner", cursive;
-  font-size: 1.2rem;
-  cursor: pointer;
 }
 
 /* ! CONTENT */
@@ -26,13 +23,17 @@ body {
 }
 
 .title {
-  font-family: "Edu TAS Beginner", cursive;
+  font-family: var(--default-font-family);
   font-size: 4rem;
 }
 
 /* # Stamped cards */
 .card {
+  height: 100%;
+  font-size: 1.2rem;
+  font-family: var(--default-font-family);
   box-shadow: 10px 10px 15px;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -58,7 +59,7 @@ body {
 /* # stamped layover */
 #layover {
   background-color: rgba(0, 0, 0, 0.5);
-  font-family: "Edu TAS Beginner", cursive;
+  font-family: var(--default-font-family);
   display: flex;
   flex-direction: column;
   align-items: center;
