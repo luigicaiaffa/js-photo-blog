@@ -2,19 +2,18 @@
 // card per stampare output
 const cardStamp = document.getElementById("card-output");
 
-// layover elements
-const layoverEl = document.getElementById("layover");
-const layoverBtn = document.getElementById("layover-btn");
-const layoverImg = document.getElementById("layover-img");
+// overlay elements
+const overlayEl = document.getElementById("overlay");
+const overlayBtn = document.getElementById("overlay-btn");
+const overlayImg = document.getElementById("overlay-img");
 
 // numero di card da generare
 const cardToGen = 6;
 
 // # Svolgimento
-/** funzione che attiva e disattiva il layover
- *
+/** funzione che attiva e disattiva l'overlay
  */
-const layoverHandler = () => {
+const overlayHandler = () => {
   // raccolgo le card
   const allCards = document.querySelectorAll(".card");
 
@@ -26,8 +25,8 @@ const layoverHandler = () => {
     // ! switch on
     // al click della singola card
     singleCard.addEventListener("click", () => {
-      // rimuovi d-none al layover
-      layoverEl.classList.remove("d-none");
+      // rimuovi d-none all'overlay
+      overlayEl.classList.remove("d-none");
 
       // per ogni card
       allCards.forEach((singleCard) => {
@@ -35,15 +34,15 @@ const layoverHandler = () => {
         singleCard.classList.add("d-none");
       });
 
-      // stampa l'img nel layover
-      layoverImg.innerHTML = `<img src="${imagesEl.src}" alt="img" />`;
+      // stampa l'img nell'overlay
+      overlayImg.innerHTML = `<img src="${imagesEl.src}" alt="img" />`;
     });
 
     // ! switch off
     // al click del bottone
-    layoverBtn.addEventListener("click", () => {
-      // aggiungi d-none al layover
-      layoverEl.classList.add("d-none");
+    overlayBtn.addEventListener("click", () => {
+      // aggiungi d-none all'overlay
+      overlayEl.classList.add("d-none");
 
       // per ogni card
       allCards.forEach((singleCard) => {
@@ -54,19 +53,18 @@ const layoverHandler = () => {
   });
 };
 
-/** funzione che genera e stampa card con un'immaggine ed una descrizione
- *
+/** funzione che genera e stampa card con un'immagine ed una descrizione
  * @param {number} numCardToGen  numero di card da stampare
  */
-const generateImageCards = (numCardToGen) => {
+const stampGeneratedImageCards = (numCardToGen, stampEl) => {
   fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${numCardToGen}`)
     .then((res) => res.json())
-    .then((imgsData) => {
+    .then((images) => {
       // per ogni immagine generata
-      imgsData.forEach((img) => {
-        // stampa le card
-        cardStamp.innerHTML += `           
-          <div class="col-12 col-md-6 col-lg-4">
+      images.forEach((img) => {
+        // stampa le singole card
+        stampEl.innerHTML += `           
+          <div class="col-12 col-md-6 col-xl-4">
             <div class="card">
               <img class="card-pin" src="./img/pin.svg" alt="pin" />
               <div class="card-body">
@@ -77,10 +75,10 @@ const generateImageCards = (numCardToGen) => {
           </div>`;
       });
 
-      // layover on/off
-      layoverHandler();
+      // overlay
+      overlayHandler();
     });
 };
 
 // # Output
-generateImageCards(cardToGen);
+stampGeneratedImageCards(cardToGen, cardStamp);

@@ -40,7 +40,7 @@ body {
   overflow: hidden;
   transition-duration: 0.8s;
   transition-property: transform;
-  transform: rotate(30deg) scale(1.2);
+  transform: rotate(30deg) scale(1.1);
   box-shadow: 20px 15px 10px;
   z-index: 1;
 }
@@ -56,8 +56,8 @@ body {
   top: -10px;
 }
 
-/* # stamped layover */
-#layover {
+/* # stamped overlay */
+#overlay {
   background-color: rgba(0, 0, 0, 0.5);
   font-family: var(--default-font-family);
   display: flex;
@@ -69,14 +69,12 @@ body {
   right: 0;
   bottom: 0;
   top: 0;
-  overflow-y: scroll;
 }
 
-#layover-btn {
-  margin-bottom: 1.5rem;
+#overlay-btn {
   padding: 0.6rem 5rem;
 }
 
-#layover-img {
-  margin-bottom: 2rem;
+#overlay-img {
+  margin: 2rem;
 }
